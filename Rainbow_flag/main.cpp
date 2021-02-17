@@ -53,6 +53,7 @@ void display() {
     glVertex2f(-0.55f, 0.6f);
     glVertex2f(-0.55f,  -0.7f);
     glVertex2f(-0.6f,  -0.7f);
+
 //###################################################
 
     glBegin(GL_QUADS);
