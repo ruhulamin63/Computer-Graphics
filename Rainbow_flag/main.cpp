@@ -62,10 +62,11 @@ void display() {
 	glVertex2f(-0.60f, -0.8f);
 	glVertex2f(-0.50f, -0.8f);
 	glVertex2f(-0.50f, -0.7f);
+
 //================================================
     glEnd();
 
-	glFlush();  // Render now
+	glFlush();
 }
 
 int main(int argc, char** argv) {
