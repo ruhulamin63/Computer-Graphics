@@ -144,8 +144,9 @@ void display() {
 
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
-	glutCreateWindow("Rainbow Flag");
-	glutInitWindowSize(320, 320);
+	glutInitWindowSize(600, 500);
+	glutInitWindowPosition(200, 150);
+    glutCreateWindow("Rainbow Flag");
 	glutDisplayFunc(display);
 	glutMainLoop();
 
