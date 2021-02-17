@@ -1,21 +1,25 @@
 #include <windows.h>
 #include <GL/glut.h>
 
-void draw_line(int x, int y, int sizes, int num){
+void Horizontal_line(int x, int y, int sizes, int num){
+
     for(int a=x, b=y, c=0; c<num; c++, a+=sizes){
         glBegin(GL_POLYGON);
-        glVertex2f(a,b);
-        glVertex2f(a+sizes, b);
-        glVertex2f(a+sizes, b+sizes);
-        glVertex2f(a, b+sizes);
+
+        glVertex2i(a,b);
+        glVertex2i(a+sizes, b);
+        glVertex2i(a+sizes, b+sizes);
+        glVertex2i(a, b+sizes);
 
         glEnd();
     }
 }
 //==========================================================
 void vertical_line(int x, int y, int sizes, int num){
+
     for(int a=x, b=y, c=0; c<num; c++, b+=sizes){
         glBegin(GL_POLYGON);
+
         glVertex2i(a,b);
         glVertex2i(a+sizes, b);
         glVertex2i(a+sizes, b+sizes);
@@ -32,20 +36,19 @@ void Attached_Images(){
     int sizes=25, blocks=17;
     int x=9*sizes, y=3*sizes;
 
-    glColor3ub(0.0,0.0,0.0);
-    draw_line(x, y, sizes, blocks);
+    glColor3f(0.0,0.0,0.0); //color black
+    Horizontal_line(x, y, sizes, blocks);
 ///*
     x=9*sizes, y=4*sizes;
     blocks;
 
     for(int a=0; a<=5; a++){
-        glColor3b(250.0,250.0,0.0);
-        draw_line(x, y, sizes, blocks);
+        glColor3f(250.0,250.0,0.0); // color yellow
+        Horizontal_line(x, y, sizes, blocks);
 
-        glColor3b(0.0,0.0,0.0);
-        draw_line(x-sizes, y, sizes, 1);
-
-        draw_line(x+(blocks*sizes), y, sizes, 1);
+        glColor3f(0.0,0.0,0.0); //color black
+        Horizontal_line(x-sizes, y, sizes, 1);
+        Horizontal_line(x+(blocks*sizes), y, sizes, 1);
 
         x=x-sizes;
         y=y+sizes;
@@ -55,14 +58,14 @@ void Attached_Images(){
     x=3*sizes, y=10*sizes;
 
     for(int a=0; a<7; a++){
-        glColor3b(250.0,250.0,0.0);
-        draw_line(x, y, sizes, 29);
+        glColor3f(250.0,250.0,0.0); // color yellow
+        Horizontal_line(x, y, sizes, 29);
 
-        glColor3b(0.0,0.0,0.0);
-        draw_line(x-sizes, y, sizes, 1);
+        glColor3f(0.0,0.0,0.0); //color black
+        Horizontal_line(x-sizes, y, sizes, 1);
 
-        glColor3b(0.0,0.0,0.0);
-        draw_line(x+(29*sizes), y, sizes, 1);
+        glColor3f(0.0,0.0,0.0); //color black
+        Horizontal_line(x+(29*sizes), y, sizes, 1);
 
         y +=sizes;
     }
@@ -70,13 +73,13 @@ void Attached_Images(){
     x=4*sizes, y=17*sizes, blocks=27;
 
     for(int a=0; a<=5; a++){
-        glColor3b(250.0,250.0,0.0);
-        draw_line(x, y, sizes, blocks);
+        glColor3f(250.0,250.0,0.0); // color yellow
+        Horizontal_line(x, y, sizes, blocks);
 
-        glColor3b(0.0,0.0,0.0);
-        draw_line(x-sizes, y, sizes, 1);
+        glColor3f(0.0,0.0,0.0); //color black
+        Horizontal_line(x-sizes, y, sizes, 1);
 
-        draw_line(x+(blocks*sizes), y, sizes, 1);
+        Horizontal_line(x+(blocks*sizes), y, sizes, 1);
 
         y +=sizes;
         x +=sizes;
@@ -84,8 +87,8 @@ void Attached_Images(){
     }
     x=9*sizes;
 
-    glColor3b(0.0,0.0,0.0);
-    draw_line(x, y, sizes, blocks+2);
+    glColor3f(0.0,0.0,0.0); //color black
+    Horizontal_line(x, y, sizes, blocks+2);
 
     x=4*sizes, y=11*sizes;
     blocks=5;
