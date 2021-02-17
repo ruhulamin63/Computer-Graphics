@@ -218,3 +218,7 @@
 	<stddef.h>
 	<GL/gl.h>
 
+1612974030 source:e:\8th semester 20-21\cg\lab_task\computer-graphics\aiub text\main.cpp
+	<windows.h>
+	<GL/glut.h>
+

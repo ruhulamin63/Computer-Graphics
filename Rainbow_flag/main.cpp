@@ -68,11 +68,11 @@ void display() {
 }
 
 int main(int argc, char** argv) {
-	glutInit(&argc, argv);              // Initialize GLUT
-	glutCreateWindow("Rainbow Flag");  // Create window with the given title
-	glutInitWindowSize(320, 320);       // Set the window's initial width & height
-	glutDisplayFunc(display);           // Register callback handler for window re-paint event
-	glutMainLoop();                     // Enter the event-processing loop
+	glutInit(&argc, argv);
+	glutCreateWindow("Rainbow Flag");
+	glutInitWindowSize(400, 300);
+	glutDisplayFunc(display);
+	glutMainLoop();
 
 	return 0;
 }
