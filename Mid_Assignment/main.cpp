@@ -99,17 +99,18 @@ glClear(GL_COLOR_BUFFER_BIT);
     glEnd();
 ///=======================================================================================
 ///CLOUD
-	float x_c,y_c,radius_c,circle_c,pie_c;
-    x_c= -0.4f;
-    y_c= 0.7f;
-    radius_c =.15f;
-    circle_c = 20;
+	float x_c,y_c,radius_c,pie_c;
+    x_c= -0.55f;
+    y_c= 0.8f;
+    radius_c =.1f;
+    int circle_c = 20;
     pie_c = 2.0f * pi;
 
 	glBegin(GL_TRIANGLE_FAN);
 	glColor3ub(230, 255, 255);
     glVertex2f(x_c, y_c);
-    for(int i=0; i<=circle_c;i++) {
+
+    for(int i=0; i<=circle_c;i++){
     glVertex2f(
                 x_c + (radius_c * cos(i *  pie_c / circle_c)),
                 y_c + (radius_c * sin(i * pie_c / circle_c))
@@ -118,15 +119,15 @@ glClear(GL_COLOR_BUFFER_BIT);
 	glEnd();
 ///=======================================================================================
 ///SUN
-	float x=-0.7f,y=0.7f,sun_radius =.280f;
+	float x=-0.7f,y=0.7f,sun_radius =.2f;
 	int circle = 100;
 	float pie_sun = 2.0f * pi;
 
 	glBegin(GL_TRIANGLE_FAN);
 	glColor3ub(255, 209, 26);
     glVertex2f(x, y);
-    for(int i=0; i<=circle; i++)
-    {
+
+    for(int i=0; i<=circle; i++){
         glVertex2f(x+(sun_radius*cos(i*pie_sun/circle)),
                    y+(sun_radius*sin(i*pie_sun/circle))
                 );
@@ -134,6 +135,7 @@ glClear(GL_COLOR_BUFFER_BIT);
 	glEnd();
 
 ///======================================================================================
+///Main Circle for AIUB Dim
 	float x_d,y_d,radius_d,pie_d;
 	int circle_d = 30;
         x_d=.0f;
@@ -142,7 +144,7 @@ glClear(GL_COLOR_BUFFER_BIT);
         pie_d = 2.0f * pi;
 
 	glBegin(GL_TRIANGLE_FAN);
-	glColor3ub(181,213,223);
+	glColor3ub(236, 240, 241);
     glVertex2f(x_d,y_d);
     for(int i=0; i<=circle_d;i++) {
     glVertex2f
@@ -153,7 +155,7 @@ glClear(GL_COLOR_BUFFER_BIT);
 		}
 	glEnd();
 ///=======================================================================================
- ///Antina
+ ///Network tower
     glPointSize(3.0);
     glLineWidth(3.0);
 
@@ -166,18 +168,178 @@ glClear(GL_COLOR_BUFFER_BIT);
     glEnd();
 
 //=======================================================================================
- ///BuildingBase
+ ///Under_Ground
      glBegin(GL_QUADS);
-     glColor3ub(181,213,223);
+     glColor3ub(236, 240, 241);
      glVertex2f(-0.35,-0.6);
      glVertex2f(-0.35,-0.8);
      glVertex2f(0.35,-0.8);
      glVertex2f(0.35,-0.6);
      glEnd();
-//=======================================================================================
- ///MainBase
+///=======================================================================================
+ ///FloorBase
+
      glBegin(GL_POLYGON);
-     glColor3ub(229,152,102);
+     glColor3ub(19, 141, 117);
+     glVertex2f(-0.536,-0.5);
+     glVertex2f(-0.435,-0.59);
+     glVertex2f(0.435,-0.59);
+     glVertex2f(0.536,-0.5);
+     glEnd();
+
+     glBegin(GL_POLYGON);
+     glColor3ub(19, 141, 117);
+     glVertex2f(-0.67,-0.3);
+     glVertex2f(-0.615,-0.4);
+     glVertex2f(0.615,-0.4);
+     glVertex2f(0.67,-0.3);
+     glEnd();
+
+     glBegin(GL_POLYGON);
+     glColor3ub(19, 141, 117);
+     glVertex2f(-0.734,-0.02);
+     glVertex2f(-0.709,-0.19);
+     glVertex2f(0.709,-0.19);
+     glVertex2f(0.734,-0.02);
+     glEnd();
+
+     glBegin(GL_POLYGON);
+     glColor3ub(19, 141, 117);
+     glVertex2f(-0.728,0.1);
+     glVertex2f(-0.706,0.2);
+     glVertex2f(0.706,0.2);
+     glVertex2f(0.728,0.1);
+     glEnd();
+
+     glBegin(GL_POLYGON);
+     glColor3ub(19, 141, 117);
+     glVertex2f(-0.66,0.32);
+     glVertex2f(-0.59,0.44);
+     glVertex2f(0.59,0.44);
+     glVertex2f(0.66,0.32);
+     glEnd();
+///========================================================================================
+
+///BD Flag
+
+    glPointSize(8.0);
+    glLineWidth(8.0);
+
+    glBegin(GL_LINES);
+	glColor3ub(93, 109, 126);
+
+	glVertex2f(0.0f, -0.7f); //Stand for flag
+	glVertex2f(0.0f, 0.0f);
+	glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(25, 111, 61);
+
+    glVertex2f(0.0f,-0.02f);
+    glVertex2f(0.0f,-0.3f);
+    glVertex2f(0.5f,-0.3f);
+    glVertex2f(0.5f,-0.02f);
+    glEnd();
+
+///Red Circle
+
+    float fx=0.25f,fy=-0.15f,flag_radius =.08f;
+	int flag_circle = 20;
+	float flag_pie = 2.0f * pi;
+
+	glBegin(GL_TRIANGLE_FAN);
+	glColor3ub(231, 76, 60);
+    glVertex2f(fx, fy);
+    for(int i=0; i<=flag_circle; i++){
+        glVertex2f(fx+(flag_radius*cos(i*flag_pie/flag_circle)),
+                   fy+(flag_radius*sin(i*flag_pie/flag_circle))
+                );
+    }
+	glEnd();
+///===========================================================================================
+///Red color flag right side
+    glPointSize(8.0);
+    glLineWidth(8.0);
+
+    glBegin(GL_LINES);
+	glColor3ub(93, 109, 126);
+
+	glVertex2f(0.2f, -0.7f); //Stand for flag
+	glVertex2f(0.2f, -0.3f);
+	glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(231, 76, 60);
+
+    glVertex2f(0.2f,-0.32f);
+    glVertex2f(0.2f,-0.5f);
+    glVertex2f(0.5f,-0.5f);
+    glVertex2f(0.5f,-0.32f);
+    glEnd();
+///===========================================================================================
+///Orange color flag right side
+    glPointSize(8.0);
+    glLineWidth(8.0);
+
+    glBegin(GL_LINES);
+	glColor3ub(93, 109, 126);
+
+	glVertex2f(0.6f, -0.7f); //Stand for flag
+	glVertex2f(0.6f, -0.3f);
+	glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(212, 172, 13);
+
+    glVertex2f(0.6f,-0.32f);
+    glVertex2f(0.6f,-0.5f);
+    glVertex2f(0.9f,-0.5f);
+    glVertex2f(0.9f,-0.32f);
+    glEnd();
+///===========================================================================================
+///Green color flag left side
+    glPointSize(8.0);
+    glLineWidth(8.0);
+
+    glBegin(GL_LINES);
+	glColor3ub(93, 109, 126);
+
+	glVertex2f(-0.2f, -0.7f); //Stand for flag
+	glVertex2f(-0.2f, -0.3f);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+    glColor3ub(0, 179, 60);
+
+    glVertex2f(-0.2f,-0.32f);
+    glVertex2f(-0.2f,-0.5f);
+    glVertex2f(-0.5f,-0.5f);
+    glVertex2f(-0.5f,-0.32f);
+    glEnd();
+///===========================================================================================
+///Sky color flag left side
+    glPointSize(8.0);
+    glLineWidth(8.0);
+
+    glBegin(GL_LINES);
+	glColor3ub(93, 109, 126);
+
+	glVertex2f(-0.6f, -0.7f); //Stand for flag
+	glVertex2f(-0.6f, -0.3f);
+	glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(100, 149, 237);
+
+    glVertex2f(-0.6f,-0.32f);
+    glVertex2f(-0.6f,-0.5f);
+    glVertex2f(-0.9f,-0.5f);
+    glVertex2f(-0.9f,-0.32f);
+    glEnd();
+///===========================================================================================
+ ///Frontier View
+     glBegin(GL_POLYGON);
+     glColor3ub(44, 62, 80);
 
      glVertex2f(-1,-0.7);
      glVertex2f(-1,-1);
@@ -191,7 +353,7 @@ glClear(GL_COLOR_BUFFER_BIT);
     glLineWidth(8.0);
 
     glBegin(GL_LINES);
-	glColor3ub(48, 63, 159);
+	glColor3ub(153, 163, 164);
 
 	glVertex2f(-0.7f, -0.75f);
 	glVertex2f(-0.8f, -.95f);
@@ -244,60 +406,19 @@ glClear(GL_COLOR_BUFFER_BIT);
     glVertex2f(0.7f, -0.95f);
     glVertex2f(0.75f, -.9f);
 
-
 	glEnd();
 ///=================================BBBBBBBBBBBBBB============================================
- ///FloorBase
-     glBegin(GL_POLYGON);
-     glColor3ub(0,102,204);
-     glVertex2f(-0.536,-0.5);
-     glVertex2f(-0.435,-0.59);
-     glVertex2f(0.435,-0.59);
-     glVertex2f(0.536,-0.5);
-     glEnd();
 
-     glBegin(GL_POLYGON);
-     glColor3ub(0,102,204);
-     glVertex2f(-0.67,-0.3);
-     glVertex2f(-0.615,-0.4);
-     glVertex2f(0.615,-0.4);
-     glVertex2f(0.67,-0.3);
-     glEnd();
-
-     glBegin(GL_POLYGON);
-     glColor3ub(0,102,204);
-     glVertex2f(-0.734,-0.02);
-     glVertex2f(-0.709,-0.19);
-     glVertex2f(0.709,-0.19);
-     glVertex2f(0.734,-0.02);
-     glEnd();
-
-     glBegin(GL_POLYGON);
-     glColor3ub(0,102,204);
-     glVertex2f(-0.728,0.1);
-     glVertex2f(-0.706,0.2);
-     glVertex2f(0.706,0.2);
-     glVertex2f(0.728,0.1);
-     glEnd();
-
-     glBegin(GL_POLYGON);
-     glColor3ub(0,102,204);
-     glVertex2f(-0.66,0.32);
-     glVertex2f(-0.59,0.44);
-     glVertex2f(0.59,0.44);
-     glVertex2f(0.66,0.32);
-     glEnd();
-
-    glLoadIdentity();
-    glFlush();
+     glLoadIdentity();
+     glFlush();
 }
+///=======================================================================================
 
-//=======================================================================================
-int main(int argc, char** argv)
-{
+
+int main(int argc, char** argv) {
 	glutInit(&argc, argv);
-	glutCreateWindow("AIUB C Building");
-	glutInitWindowSize(600,500);
+	glutInitWindowSize(600, 500);
+    glutCreateWindow("AIUB View");
 	glutDisplayFunc(display);
 	glutMainLoop();
 
