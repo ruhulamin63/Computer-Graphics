@@ -165,7 +165,7 @@ void display() {
 	glVertex2f(0.50f, -0.20f);
 	glVertex2f(0.45f, -0.20f);
 
-//==========================================
+//==============================BBBBBBBBBB========================
     glEnd();
 
 	glFlush();  // Render now
@@ -175,7 +175,7 @@ int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitWindowSize(600, 500);
 	glutInitWindowPosition(200, 150);
-    glutCreateWindow("Rainbow Flag");
+    glutCreateWindow("AIUB Text");
 	glutDisplayFunc(display);
 	glutMainLoop();
 
