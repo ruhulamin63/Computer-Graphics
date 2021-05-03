@@ -1,11 +1,28 @@
 # depslib dependency file v1.0
-1616656086 source:e:\8th semester 20-21\cg\lab_task\2d_transformation\main.cpp
-	<iostream>
-	<windows.h>
-	<GL/glut.h>
+1617184626 source:e:\8th semester 20-21\cg\lab_task\computer-graphics\animation lab task\animation\main.cpp
+	<cstdio>
+	<stdio.h>
 	<GL/gl.h>
-	<math.h>
-	<vector>
+	<GL/glut.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1341006770 c:\program files (x86)\codeblocks\mingw\include\_mingw.h
+
+1341006780 c:\program files (x86)\codeblocks\mingw\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
+
+976645372 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -59,8 +76,6 @@
 1341006776 c:\program files (x86)\codeblocks\mingw\include\string.h
 	<_mingw.h>
 	<stddef.h>
-
-1341006770 c:\program files (x86)\codeblocks\mingw\include\_mingw.h
 
 1301111148 c:\program files (x86)\codeblocks\mingw\include\basetsd.h
 
@@ -211,25 +226,7 @@
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
 
-976645372 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
-	<windows.h>
-	<GL/gl.h>
-	<GL/glu.h>
-
-1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
-
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\glu.h
 	<stddef.h>
 	<GL/gl.h>
-
-1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
-	<_mingw.h>
-
-1616656232 source:e:\8th semester 20-21\cg\lab_task\computer-graphics\2d_transformation\main.cpp
-	<iostream>
-	<windows.h>
-	<GL/glut.h>
-	<GL/gl.h>
-	<math.h>
-	<vector>
 
